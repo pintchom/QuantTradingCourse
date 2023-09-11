@@ -12,3 +12,6 @@ for ticker in stocks:
     cl_price[ticker] = yf.download(ticker, start = start,end=end)["Adj Close"]
 for ticker in stocks: 
     ohlcv[ticker] = yf.download(ticker, start = start,end=end)["Adj Close"]
+
+
+#0JP92YHXCU6Y6FYD
