@@ -3,6 +3,7 @@ import pandas as pd
 import os
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_score
+import matplotlib.pyplot as plt
 
 sp500 = yf.Ticker("^GSPC")
 sp500 = sp500.history(period="max")
