@@ -23,3 +23,11 @@ test = sp500.iloc[-100:]
 
 predictors = ["Close", "Volume", "Open", "High", "Low"]
 model.fit(train[predictors], train["Target"])
+preds = model.predict(test[predictors])
+preds = pd.Series(preds, index=test.index)
+
+print(precision_score(test["Target"], preds))
+
+
+combined = pd.concat([test["Target"], preds], axis = 1)
+combined.plot()
